@@ -1,0 +1,362 @@
+/* ================
+Global Layout Set-up
+===================*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background: #C7C9BE;
+  color: #424242
+}
+
+/* ===================
+NAVIGATION
+====================*/
+
+ a {
+   text-decoration: none;
+ }
+.main-nav {
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+  color: #FFF;
+  display: block;
+  margin-bottom: 1em;
+}
+.nav {
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 110%;
+}
+.name {
+  font-weight: 700;
+  font-size: 200%;
+  padding: .5em;
+  margin: 5px 0 10px 0;
+}
+.nav .name {
+  color: #FFF;
+}
+a:visited {
+  color: #FFF;
+}
+.nav .selected {
+  color: #89CEDE;
+}
+.nav li {
+  padding: 5px;
+    color: #FFF;
+}
+.nav a {
+  display: block;
+  padding: 16px;
+  background-color: #929487;
+    color: #FFF;
+}
+.nav a:hover {
+  color: #89CEDE;
+}
+.links a {
+  color: #fff;
+}
+
+/* ===================
+Profile
+====================*/
+
+.profile {
+  background: #C7C9BE;
+}
+.profile-image {
+  padding-top: 30px;
+  width: 75%;
+}
+.about {
+  padding: 0 40px 40px 40px;
+  font-weight: 300;
+  font-size: 130%;
+}
+
+/* ===================
+portfolio
+====================*/
+
+.portfolio {
+  background: #F4F5ED;
+  padding: 2.5em 0 2em 0;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 120%;
+  padding: 1em 0 1em 0;
+  font-weight: bold;
+}
+h3 {
+  font-size: 120%;
+  font-weight: 400;
+  padding-top: 10px;
+}
+.main-gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #F4F5ED;
+}
+.portfolio-images {
+  width: 92%;
+  border: 3px solid #929487;
+}
+.card {
+  padding: 15px 0px;
+}
+.card p {
+  padding: 0px 45px;
+  font-weight: 300;
+  font-size: 120%;
+}
+
+/* ===================
+skills
+====================*/
+
+.skills {
+  color: #424242;
+  background: #C7C9BE;
+  margin: 0;
+  padding: 2em;
+}
+.skills p {
+  font-weight: 300;
+  font-size: 120%;
+}
+.skills ul {
+  padding: 0;
+  text-align: center;
+}
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #DC4E00;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+}
+.skills li:nth-child(odd){
+  background: #89CEDE;
+}
+
+/* ===================
+skills
+====================*/
+
+.contact {
+  background: #C7C9BE;
+  padding: 1em 30px 2em 30px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ===================
+FOOTER
+====================*/
+
+.between {
+    border-top: 1px solid #DC4E00;
+    width: 90%;
+    margin: auto;
+}
+footer {
+  margin-bottom: 3em;
+}
+.menu1 {
+  list-style-type: none;
+  text-align: right;
+  padding: 1em 1em 0 0;
+  margin: 0;
+}
+.menu1 a {
+    color: #424242;
+}
+.menu2 {
+  display: none;
+}
+.footer-name {
+  float: left;
+  text-align: left;
+  padding: 1em 0 0 1em;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* =================================
+Media Queries
+====================================*/
+
+@media (min-width: 768px) {
+
+  /* ===================
+  Float Clearfix
+  =====================*/
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* ===================
+  NAVIGATION
+   ====================*/
+  .nav li {
+    display: inline-block;
+    margin-bottom: 2em;
+  }
+  .name {
+    width: 100%;
+  }
+
+  /* ===================
+  PROFILE
+   ====================*/
+
+   .about {
+     padding: 0 1em 0 2em;
+     vertical-align: top;
+     text-align: left;
+     font-size: 130%;
+     width: 60%;
+   }
+  .profile-image {
+    padding: 0 2em 3em 0;
+    width: 40%;
+    float: right;
+  }
+
+  /* ===================
+  BODY
+   ====================*/
+
+  h1 {
+    padding: 60px 0 40px 0;
+  }
+  h2 {
+    padding-top: 10px;
+  }
+
+  .main-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .card {
+    width: 50%;
+  }
+  .description {
+    display: inline-block;
+    margin: -.25em 1em 1.75em 1em;
+  }
+
+  /*=================
+  contact
+  ===================*/
+
+  .contact {
+    padding: 0 6em 3em 6em;
+    font-size: 120%;
+    width: 100%;
+  }
+
+  /*=================
+  footer
+  ===================*/
+
+  .menu1 {
+    display: none;
+  }
+  .menu2 {
+    display: inline-block;
+  }
+  .menu2 {
+    visibility: visible;
+    float: right;
+    padding: 0;
+  }
+  .menu2 li {
+		display: inline-block;
+		padding: 0 1em 0 12px;
+	}
+  .menu2 a {
+		text-decoration: none;
+    color: #424242;
+    text-transform: uppercase;
+    padding: 5px 5px;
+	}
+
+}
+
+@media (min-width: 1024px) {
+
+  /* ===================
+  Float Clearfix
+  =====================*/
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* ===================
+  NAVIGATION
+   ====================*/
+
+  .nav {
+    width: 52%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 1em;
+  }
+  .name {
+    display: inline-block;
+    width: 46%;
+    text-align: left;
+    margin-left: 15px;
+    padding-left: 1em;
+  }
+
+  /* ===================
+  Profile
+   ====================*/
+
+   .about {
+     font-size: 150%;
+   }
+   .pic7 {
+     display: inline-block;
+     margin-left: 16%;
+   }
+   .pic8 {
+     display: inline-block;
+     margin-right: 16%;
+   }
+
+  /* ===================
+  portfolio
+   ====================*/
+
+   .card {
+     width: 33.33%;
+   }
+
+}
